@@ -44,6 +44,6 @@ app.all('*', function (req, res) {
   res.status(200).sendFile(path.join(__dirname, '/client/index.html'));
 });
 
-var port = process.env.PORT || 3000;
+var port = process.env.PORT || 8080;
 app.listen(port);
 console.log('Express server listening on port ' + port);

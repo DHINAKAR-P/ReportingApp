@@ -7,9 +7,9 @@ export class ConfigService {
 
     constructor(private restapi:SharedService){}
 
-    private _api_url = this.restapi.baseUrl+'/api';
+    private _api_url = '/api';  //this.restapi.baseUrl+
 
-    private _auth_url = this.restapi.baseUrl+'/auth';
+    private _auth_url = '/auth';
 
     private _login_url = this._auth_url + '/login';
 
