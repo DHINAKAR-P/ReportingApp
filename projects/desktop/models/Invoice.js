@@ -1,5 +1,6 @@
 var mongoose = require('mongoose');
 var autoIncrement = require('mongoose-auto-increment');
+var Schema = mongoose.Schema
 
 var Invoice_schema = new mongoose.Schema({
    id: {type : Number},
@@ -10,7 +11,7 @@ var Invoice_schema = new mongoose.Schema({
    product:{type : String},
    warehouse:{type : String},
    //customer:{type : String},
-   customer: { type: Schema.Types.ObjectId, ref: 'Customer' },
+   customer: [{ type: Schema.Types.Array, ref: 'Customer' }],
    shippingcomapny:{type : String}
 },{
     versionKey: false // You should be aware of the outcome after set to false

@@ -1,7 +1,7 @@
 <section>
     <div class="container">
         <div class="row" style="padding-top: 60px">
-            <div class="col-lg-6 col-lg-offset-2">
+            <div class="col-lg-12 col-lg-offset-4">
                 <label class="generated-label">Invoice Screen</label>
             </div>
         </div>
@@ -9,7 +9,7 @@
             <div class="col-lg-1 col-lg-offset-2">
                 <label class="generated-label">ShippingDate</label>
             </div>
-            <div class="col-lg-6 ">
+            <div class="col-lg-5  col-lg-offset-2">
                 <mat-input-container>
                     <input matInput placeholder="Date" type="date" style="width: 100%;" [(ngModel)]="invoice.shippingdate">
                 </mat-input-container>
@@ -20,9 +20,9 @@
                 <label class="generated-label">Product</label>
             </div>
             <div class="col-lg-5 ">
-                <mat-input-container class="" style="width: 100%;">
-                    <input matInput placeholder="Input" [(ngModel)]="invoice.product">
-                </mat-input-container>
+                <mat-select [placeholder]="Select_product" class="null" style="width: 100%;" [(ngModel)]="invoice.product" multiple>
+                    <mat-option *ngFor="let product of array_IProduct" [value]="product">{{product.name}}</mat-option>
+                </mat-select>
             </div>
         </div>
         <div class="row" style="padding-top: 38px">
@@ -30,9 +30,9 @@
                 <label class="generated-label">Warehouse</label>
             </div>
             <div class="col-lg-5 ">
-                <mat-input-container class="" style="width: 100%;">
-                    <input matInput placeholder="Input" [(ngModel)]="invoice.warehouse">
-                </mat-input-container>
+                <mat-select placeholder="Select" class="null" style="width: 100%;" [(ngModel)]="invoice.warehouse">
+                    <mat-option *ngFor="let warehouse of array_IWarehouse" [value]="warehouse">{{warehouse.name}}</mat-option>
+                </mat-select>
             </div>
         </div>
         <div class="row" style="padding-top: 63px">
@@ -50,9 +50,9 @@
                 <label class="generated-label">Shipping_company</label>
             </div>
             <div class="col-lg-5 ">
-                <mat-input-container class="" style="width: 100%;">
-                    <input matInput placeholder="Input" [(ngModel)]="invoice.shippingcomapny">
-                </mat-input-container>
+                <mat-select placeholder="Select" class="null" style="width: 100%;" [(ngModel)]="invoice.shippingcomapny">
+                    <mat-option *ngFor="let shippingcomapny of array_IShippingComapany" [value]="shippingcomapny">{{shippingcomapny.comapnyname}}</mat-option>
+                </mat-select>
             </div>
         </div>
         <div class="row" style="padding-top: 67px">
