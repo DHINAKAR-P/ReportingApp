@@ -14,33 +14,25 @@
         <div class="row" style="padding-top: 68px">
         <div class="col-lg-1 col-lg-offset-2"><label class="generated-label">Product</label>
         </div>
-        <div class="col-lg-5 "><mat-select placeholder="MultiSelect" class="null" style="width: 100%;" [(ngModel)]="invoice.product" multiple >
-        <mat-option *ngFor="let invoice of array_Invoice2" [value]="invoice">{{invoice.product}}</mat-option>
-        </mat-select>
+        <div class="col-lg-5 "><mat-input-container class="" style="width: 100%;"><input matInput placeholder="Input" [(ngModel)]="invoice.product"></mat-input-container>
         </div>
         </div>
         <div class="row" style="padding-top: 38px">
         <div class="col-lg-1 col-lg-offset-2"><label class="generated-label">Warehouse</label>
         </div>
-        <div class="col-lg-5 "><mat-select placeholder="Select" class="null" style="width: 100%;" [(ngModel)]="invoice.warehouse">
-        <mat-option *ngFor="let invoice of array_Invoice2" [value]="invoice.warehouse">{{invoice.warehouse}}</mat-option>
-        </mat-select>
+        <div class="col-lg-5 "><mat-input-container class="" style="width: 100%;"><input matInput placeholder="Input" [(ngModel)]="invoice.warehouse"></mat-input-container>
         </div>
         </div>
         <div class="row" style="padding-top: 63px">
         <div class="col-lg-1 col-lg-offset-2"><label class="generated-label">Customer</label>
         </div>
-        <div class="col-lg-5 "><mat-select placeholder="Select" class="null" style="width: 100%;" [(ngModel)]="invoice.customer">
-        <mat-option *ngFor="let invoice of array_Invoice2" [value]="invoice.customer">{{invoice.customer}}</mat-option>
-        </mat-select>
+        <div class="col-lg-5 "><mat-input-container class="" style="width: 100%;"><input matInput placeholder="Input" [(ngModel)]="invoice.customer"></mat-input-container>
         </div>
         </div>
         <div class="row" style="padding-top: 60px">
         <div class="col-lg-2 col-lg-offset-1"><label class="generated-label">Shipping_company</label>
         </div>
-        <div class="col-lg-5 "><mat-select placeholder="ShippingComapny" class="null" style="width: 100%;" [(ngModel)]="invoice.shippingcomapny">
-        <mat-option *ngFor="let invoice of array_Invoice2" [value]="invoice.shippingcomapny">{{invoice.shippingcomapny}}</mat-option>
-        </mat-select>
+        <div class="col-lg-5 "><mat-input-container class="" style="width: 100%;"><input matInput placeholder="Input" [(ngModel)]="invoice.shippingcomapny"></mat-input-container>
         </div>
         </div>
         <div class="row" style="padding-top: 67px">
