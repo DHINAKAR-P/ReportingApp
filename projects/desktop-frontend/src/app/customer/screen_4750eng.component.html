@@ -1,0 +1,45 @@
+<section>
+    <div class="container">
+        <div class="row" style="padding-top: 70px">
+        <div class="col-lg-5 col-lg-offset-4"><label class="generated-label">Customer Screen</label>
+        </div>
+        </div>
+        <div class="row" style="padding-top: 88px">
+        <div class="col-lg-1 col-lg-offset-1"><label class="generated-label">Name</label>
+        </div>
+        <div class="col-lg-2 "><mat-input-container class="" style="width: 100%;"><input matInput placeholder="Input" [(ngModel)]="customer.name"></mat-input-container>
+        </div>
+        </div>
+        <div class="row" style="padding-top: 50px">
+        <div class="col-lg-1 col-lg-offset-1"><label class="generated-label">Phone</label>
+        </div>
+        <div class="col-lg-2 "><mat-input-container class="" style="width: 100%;"><input matInput placeholder="Input" [(ngModel)]="customer.phone"></mat-input-container>
+        </div>
+        </div>
+        <div class="row" style="padding-top: 48px">
+        <div class="col-lg-1 col-lg-offset-1"><label class="generated-label">Address</label>
+        </div>
+        <div class="col-lg-2 "><mat-input-container class="" style="width: 100%;"><input matInput placeholder="Input" [(ngModel)]="customer.address"></mat-input-container>
+        </div>
+        </div>
+        <div class="row" style="padding-top: 54px">
+        <div class="col-lg-1 col-lg-offset-1"><label class="generated-label">city</label>
+        </div>
+        <div class="col-lg-2 "><mat-input-container class="" style="width: 100%;"><input matInput placeholder="Input" [(ngModel)]="customer.city"></mat-input-container>
+        </div>
+        </div>
+        <div class="row" style="padding-top: 50px">
+        <div class="col-lg-1 col-lg-offset-1"><label class="generated-label">pincode</label>
+        </div>
+        <div class="col-lg-2 "><mat-input-container class="" style="width: 100%;"><input matInput placeholder="Input" [(ngModel)]="customer.pincode"></mat-input-container>
+        </div>
+        </div>
+        <div class="row" style="padding-top: 71px">
+        <div class="col-lg-2 col-lg-offset-2"><a routerLink="/home"><button class="btn btn-primary" style="width: 100%;">go back</button></a>
+        </div>
+        <div class="col-lg-2 "><button class="btn btn-primary" (click)="create_Customer()" style="width: 100%;">save</button>
+        </div>
+        </div>
+
+    </div>
+</section>

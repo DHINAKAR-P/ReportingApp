@@ -1,0 +1,27 @@
+<section>
+    <div class="container">
+        <div class="row" style="padding-top: 58px">
+        <div class="col-lg-6 col-lg-offset-3"><label class="generated-label">Shipping Company Screen</label>
+        </div>
+        </div>
+        <div class="row" style="padding-top: 80px">
+        <div class="col-lg-1 col-lg-offset-3"><label class="generated-label">Name</label>
+        </div>
+        <div class="col-lg-4 "><mat-input-container class="" style="width: 100%;"><input matInput placeholder="Input" [(ngModel)]="shippingcompany.comapnyname"></mat-input-container>
+        </div>
+        </div>
+        <div class="row" style="padding-top: 50px">
+        <div class="col-lg-1 col-lg-offset-3"><label class="generated-label">location</label>
+        </div>
+        <div class="col-lg-4 "><mat-input-container class="" style="width: 100%;"><input matInput placeholder="Input"></mat-input-container>
+        </div>
+        </div>
+        <div class="row" style="padding-top: 91px">
+        <div class="col-lg-2 col-lg-offset-4"><button class="btn btn-primary" (click)="create_ShippingCompany()" style="width: 100%;">save</button>
+        </div>
+        <div class="col-lg-2 "><a routerLink="/home"><button class="btn btn-primary" style="width: 100%;">cancel</button></a>
+        </div>
+        </div>
+
+    </div>
+</section>

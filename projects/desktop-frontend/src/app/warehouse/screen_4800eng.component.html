@@ -1,0 +1,33 @@
+<section>
+    <div class="container">
+        <div class="row" style="padding-top: 59px">
+        <div class="col-lg-4 col-lg-offset-4"><label class="generated-label">WareHouse Screen</label>
+        </div>
+        </div>
+        <div class="row" style="padding-top: 95px">
+        <div class="col-lg-1 col-lg-offset-2"><label class="generated-label">Name</label>
+        </div>
+        <div class="col-lg-4 col-lg-offset-1"><mat-input-container class="" style="width: 100%;"><input matInput placeholder="Input" [(ngModel)]="warehouse.name"></mat-input-container>
+        </div>
+        </div>
+        <div class="row" style="padding-top: 57px">
+        <div class="col-lg-1 col-lg-offset-2"><label class="generated-label">Section</label>
+        </div>
+        <div class="col-lg-4 col-lg-offset-1"><mat-input-container class="" style="width: 100%;"><input matInput placeholder="Input" [(ngModel)]="warehouse.warehouse_section"></mat-input-container>
+        </div>
+        </div>
+        <div class="row" style="padding-top: 52px">
+        <div class="col-lg-1 col-lg-offset-2"><label class="generated-label">Location</label>
+        </div>
+        <div class="col-lg-4 col-lg-offset-1"><mat-input-container class="" style="width: 100%;"><input matInput placeholder="Input" [(ngModel)]="warehouse.location"></mat-input-container>
+        </div>
+        </div>
+        <div class="row" style="padding-top: 77px">
+        <div class="col-lg-2 col-lg-offset-4"><button class="btn btn-primary" (click)="create_Warehouse()" style="width: 100%;">save</button>
+        </div>
+        <div class="col-lg-2 "><a routerLink="/home"><button class="btn btn-primary" style="width: 100%;">cancel</button></a>
+        </div>
+        </div>
+
+    </div>
+</section>

@@ -1,0 +1,19 @@
+version: '2'
+services:
+  db:
+    container_name: ReportingAPP-10048-db
+    build: db
+    image: reportingapp-10048/db
+    ports:
+      - "27017"
+  node:
+    container_name: ReportingAPP-10048-web
+    build: desktop
+    image: reportingapp-10048/web
+    ports:
+      - "9090:3000"
+  jsreport:
+    container_name: ReportingAPP-10048-jsreport
+    image: jsreport/jsreport
+    ports:
+      - "5488:5488"

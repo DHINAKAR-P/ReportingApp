@@ -1,0 +1,2 @@
+exports.Customer_Default_ActivityRouter = require("./Customer_Default_ActivityRouter");exports.Warehouse_Default_ActivityRouter = require("./Warehouse_Default_ActivityRouter");exports.Product_Default_ActivityRouter = require("./Product_Default_ActivityRouter");exports.ShippingCompany_Default_ActivityRouter = require("./ShippingCompany_Default_ActivityRouter");exports.Invoice_Default_ActivityRouter = require("./Invoice_Default_ActivityRouter");
+exports.Jsreport = require("./Jsreport");
