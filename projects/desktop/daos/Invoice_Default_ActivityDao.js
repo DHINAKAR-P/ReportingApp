@@ -1,4 +1,8 @@
 var Invoice_schema = require("../models/Invoice")
+var Custormer_schema= require("../models/Customer")
+var Warehouse_schema = require("../models/Warehouse")
+var shippingcompany_schema = require("../models/ShippingCompany")
+var producto_schema = require("../models/Product")
 
 module.exports.create_Invoice = function(Invoice,callback) {
   var Invoice = new Invoice_schema(Invoice)
@@ -44,5 +48,5 @@ module.exports.get_all_Invoice = function(callback) {
     } else {
       callback(Invoice);
     }
-  });
+  }).populate( 'customer').populate("warehouse").populate("product").populate("shippingcomapny");  //[{"customer":Custormer_schema},{"warehouse":Warehouse_schema}]
 }

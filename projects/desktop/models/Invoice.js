@@ -8,11 +8,11 @@ var Invoice_schema = new mongoose.Schema({
    updated_by: {type : Number},
    updated_date:{type : Date ,default: Date.now()},
    shippingdate:{type : Date, default: Date.now()},
-   product:{type : String},
-   warehouse:{type : String},
+   product:[{ type: mongoose.Schema.Types.Number, ref: 'Product' }],
+   warehouse:{ type: mongoose.Schema.Types.Number, ref: 'Warehouse' },
    //customer:{type : String},
-   customer: [{ type: Schema.Types.Array, ref: 'Customer' }],
-   shippingcomapny:{type : String}
+   customer: { type: mongoose.Schema.Types.Number, ref: 'Customer' },
+   shippingcomapny:{ type: mongoose.Schema.Types.Number, ref: 'ShippingCompany' }
 },{
     versionKey: false // You should be aware of the outcome after set to false
 });
