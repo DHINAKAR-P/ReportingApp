@@ -5,40 +5,41 @@
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>                        
     </button>
-    <a class="navbar-brand" [routerLink]="['/']">ReportingAPP</a>
+    <!-- <a class="navbar-brand" [routerLink]="['/']">ReportingAPP</a> -->
+    <img src="https://www.stahls.com/stahls/content/resources/en-US/logo-stahlsid.png" [routerLink]="['/']" style="height: 53px;">
   </div>
   <div class="collapse navbar-collapse" id="myNavbar">
     <ul class="nav navbar-nav navbar-right">
-      <li class="active"><a [routerLink]="['/home']">Home</a></li>
-      <li class="dropdown">
+      <li class=""><a [routerLink]="['/home']">Home</a></li>
+      <li  *ngIf="admin"  class="dropdown">
         <a class="dropdown-toggle" data-toggle="dropdown" href="#">Customer<span class="caret"></span></a>
         <ul class="dropdown-menu">
           <li><a [routerLink]="['Screen_4750eng']">Customer</a></li>
 
         </ul>
       </li>
-      <li class="dropdown">
+      <li *ngIf="admin"   class="dropdown">
         <a class="dropdown-toggle" data-toggle="dropdown" href="#">Warehouse<span class="caret"></span></a>
         <ul class="dropdown-menu">
           <li><a [routerLink]="['Screen_4800eng']">Warehouse</a></li>
 
         </ul>
       </li>
-      <li class="dropdown">
+      <li *ngIf="admin"  class="dropdown">
         <a class="dropdown-toggle" data-toggle="dropdown" href="#">Product<span class="caret"></span></a>
         <ul class="dropdown-menu">
           <li><a [routerLink]="['Screen_4850eng']">Product</a></li>
 
         </ul>
       </li>
-      <li class="dropdown">
+      <li *ngIf="admin"  class="dropdown">
         <a class="dropdown-toggle" data-toggle="dropdown" href="#">ShippingCompany<span class="caret"></span></a>
         <ul class="dropdown-menu">
           <li><a [routerLink]="['Screen_4950eng']">ShippingCompany</a></li>
 
         </ul>
       </li>
-      <li class="dropdown">
+      <li *ngIf="admin"  class="dropdown">
         <a class="dropdown-toggle" data-toggle="dropdown" href="#">Invoice<span class="caret"></span></a>
         <ul class="dropdown-menu">
           <li><a [routerLink]="['Screen_5000eng']">Invoice</a></li>

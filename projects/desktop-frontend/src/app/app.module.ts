@@ -10,6 +10,7 @@ import { HeaderComponent } from './header/header.component';
 import { HeaderDirective } from './header/header.directive';
 import { FooterComponent } from './footer/footer.component';
 import { FooterDirective } from './footer/footer.directive';
+import {DashboardDirective} from './dashboard/dashboard.directive';
 import { SharedService } from './shared/shared.service';
 import { ConfigService } from './config/config.service';
 import { ApiService } from './config/api.service';
@@ -31,6 +32,9 @@ import { HomeTAComponent } from './home/home-ta.component';
 import { LoginComponent } from '././login/login.component';
 import { AnalyticsModule } from '././Analytics/analytics.module';
 import { RoleModule } from '././Analytics/Role/role.module';
+import {DashboardENComponent} from './dashboard/dashboard-en.component';
+import {DashboardTAComponent} from './dashboard/dashboard-ta.component';
+import {DashboardComponent} from './dashboard/dashboard.component';
 
 @NgModule({
   imports: [ 
@@ -42,9 +46,10 @@ import { RoleModule } from '././Analytics/Role/role.module';
     RouterModule.forRoot([
      { path: 'home', component: HomeComponent ,canActivate: [AuthGuard]},
      { path: 'login', component: LoginComponent},
+     { path: 'dashboard', component: DashboardComponent},
 
 
-     { path: '', redirectTo: 'home', pathMatch: 'full'},
+     { path: '', redirectTo: 'dashboard', pathMatch: 'full'},
      { path: '**', redirectTo: 'home', pathMatch: 'full'}
 
 
@@ -54,8 +59,7 @@ import { RoleModule } from '././Analytics/Role/role.module';
    WarehouseModule,
    ProductModule,
    ShippingCompanyModule,
-   InvoiceModule
-   ,
+   InvoiceModule,
    AnalyticsModule,
    RoleModule
 
@@ -71,6 +75,10 @@ import { RoleModule } from '././Analytics/Role/role.module';
   declarations: [ 
     AppComponent,
     HomeComponent,
+    DashboardComponent,
+    DashboardENComponent,
+    DashboardDirective,
+    DashboardTAComponent,
     HeaderComponent,
     FooterComponent,
     HomeDirective,
@@ -91,7 +99,10 @@ LoginComponent
     FooterTAComponent,
     HomeENComponent,
     HomeTAComponent,
-    LoginComponent
+    LoginComponent,
+    DashboardTAComponent,
+    DashboardENComponent,
+    DashboardComponent
   ],
   bootstrap: [ AppComponent ]
 })

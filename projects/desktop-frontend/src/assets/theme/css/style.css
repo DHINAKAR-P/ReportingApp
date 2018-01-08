@@ -427,12 +427,12 @@ header{
     
 
 .navbar-nav {
-    padding-top: 15px;
+    padding-top: 1px;
 }
 .navbar-header{
-	background: #fa5c65;
+	background: #fa5c6505;
     padding: 10px  10px 20px 10px;
-    height: 70px;
+    height: 63px;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
     margin-bottom: 0;
