@@ -4,7 +4,10 @@ import { ModalComponent } from 'ng2-bs3-modal/ng2-bs3-modal';
 import { ToastsManager } from 'ng2-toastr/ng2-toastr';
 import { InvoiceService } from './invoice.service';
 import { IInvoice } from './invoice';
+
+import {CustomerService} from '../customer/customer.service'
 import {  } from '';
+import { ICustomer } from 'app/customer/customer';
 
 @Component({
     moduleId: module.id,
@@ -15,13 +18,16 @@ export class Screen_5000engComponent implements OnInit {
 
   private array_Invoice2: IInvoice[] = [];
 
+  private array_ICustomer: ICustomer[] = [];
+
   private invoice: IInvoice = {
   	id: 0,
   	shippingdate: '',	product: '',	warehouse: '',	customer: '',	shippingcomapny: ''
   }
   ;
 
-  constructor(private router: Router, public toastr: ToastsManager, vcr: ViewContainerRef, private invoiceservice: InvoiceService) { 
+  constructor(private router: Router, public toastr: ToastsManager,
+     vcr: ViewContainerRef, private invoiceservice: InvoiceService, private customerservice: CustomerService) { 
     this.toastr.setRootViewContainerRef(vcr);
   }
 
@@ -32,10 +38,10 @@ export class Screen_5000engComponent implements OnInit {
     	this.array_Invoice = data;
     });
 
-    this.invoiceservice.get_all_Invoice()
+    this.customerservice.get_all_Customer()
     	.subscribe(data => {
     	console.log("data", data);
-    	this.array_Invoice2 = data;
+    	this.array_ICustomer = data;
     });
 
     this.invoiceservice.get_all_Invoice()

@@ -9,7 +9,8 @@ var Invoice_schema = new mongoose.Schema({
    shippingdate:{type : Date, default: Date.now()},
    product:{type : String},
    warehouse:{type : String},
-   customer:{type : String},
+   //customer:{type : String},
+   customer: { type: Schema.Types.ObjectId, ref: 'Customer' },
    shippingcomapny:{type : String}
 },{
     versionKey: false // You should be aware of the outcome after set to false

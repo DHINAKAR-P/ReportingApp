@@ -13,7 +13,7 @@
  *
 */
 
-db = connect("localhost:27017/reportingapp");
+db = connect("localhost:27017/Relation_reportingapp");
 db.createCollection("users");
 db.users.insert([{_id:1,username:"admin",password:"admin",firstname:"admin",lastname:"admin",role:"ROLE_ADMIN"}])
 db.users.insert([{_id:2,username:"user",password:"user",firstname:"user",lastname:"user",role:"ROLE_USER"}])

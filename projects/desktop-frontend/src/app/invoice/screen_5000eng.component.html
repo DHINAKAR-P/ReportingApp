@@ -1,45 +1,69 @@
 <section>
     <div class="container">
         <div class="row" style="padding-top: 60px">
-        <div class="col-lg-6 col-lg-offset-2"><label class="generated-label">Invoice Screen</label>
-        </div>
+            <div class="col-lg-6 col-lg-offset-2">
+                <label class="generated-label">Invoice Screen</label>
+            </div>
         </div>
         <div class="row" style="padding-top: 103px">
-        <div class="col-lg-1 col-lg-offset-2"><label class="generated-label">ShippingDate</label>
-        </div>
-        <div class="col-lg-6 "><mat-input-container>
-        <input matInput placeholder="Date" type="date" style="width: 100%;" [(ngModel)]="invoice.shippingdate"></mat-input-container>
-        </div>
+            <div class="col-lg-1 col-lg-offset-2">
+                <label class="generated-label">ShippingDate</label>
+            </div>
+            <div class="col-lg-6 ">
+                <mat-input-container>
+                    <input matInput placeholder="Date" type="date" style="width: 100%;" [(ngModel)]="invoice.shippingdate">
+                </mat-input-container>
+            </div>
         </div>
         <div class="row" style="padding-top: 68px">
-        <div class="col-lg-1 col-lg-offset-2"><label class="generated-label">Product</label>
-        </div>
-        <div class="col-lg-5 "><mat-input-container class="" style="width: 100%;"><input matInput placeholder="Input" [(ngModel)]="invoice.product"></mat-input-container>
-        </div>
+            <div class="col-lg-1 col-lg-offset-2">
+                <label class="generated-label">Product</label>
+            </div>
+            <div class="col-lg-5 ">
+                <mat-input-container class="" style="width: 100%;">
+                    <input matInput placeholder="Input" [(ngModel)]="invoice.product">
+                </mat-input-container>
+            </div>
         </div>
         <div class="row" style="padding-top: 38px">
-        <div class="col-lg-1 col-lg-offset-2"><label class="generated-label">Warehouse</label>
-        </div>
-        <div class="col-lg-5 "><mat-input-container class="" style="width: 100%;"><input matInput placeholder="Input" [(ngModel)]="invoice.warehouse"></mat-input-container>
-        </div>
+            <div class="col-lg-1 col-lg-offset-2">
+                <label class="generated-label">Warehouse</label>
+            </div>
+            <div class="col-lg-5 ">
+                <mat-input-container class="" style="width: 100%;">
+                    <input matInput placeholder="Input" [(ngModel)]="invoice.warehouse">
+                </mat-input-container>
+            </div>
         </div>
         <div class="row" style="padding-top: 63px">
-        <div class="col-lg-1 col-lg-offset-2"><label class="generated-label">Customer</label>
-        </div>
-        <div class="col-lg-5 "><mat-input-container class="" style="width: 100%;"><input matInput placeholder="Input" [(ngModel)]="invoice.customer"></mat-input-container>
-        </div>
+            <div class="col-lg-1 col-lg-offset-2">
+                <label class="generated-label">Customer</label>
+            </div>
+            <div class="col-lg-5 ">
+                <mat-select placeholder="Select" class="null" style="width: 100%;" [(ngModel)]="invoice.customer">
+                    <mat-option *ngFor="let customer of array_ICustomer" [value]="customer">{{customer.name}}</mat-option>
+                </mat-select>
+            </div>
         </div>
         <div class="row" style="padding-top: 60px">
-        <div class="col-lg-2 col-lg-offset-1"><label class="generated-label">Shipping_company</label>
-        </div>
-        <div class="col-lg-5 "><mat-input-container class="" style="width: 100%;"><input matInput placeholder="Input" [(ngModel)]="invoice.shippingcomapny"></mat-input-container>
-        </div>
+            <div class="col-lg-2 col-lg-offset-1">
+                <label class="generated-label">Shipping_company</label>
+            </div>
+            <div class="col-lg-5 ">
+                <mat-input-container class="" style="width: 100%;">
+                    <input matInput placeholder="Input" [(ngModel)]="invoice.shippingcomapny">
+                </mat-input-container>
+            </div>
         </div>
         <div class="row" style="padding-top: 67px">
-        <div class="col-lg-2 col-lg-offset-2"><button class="btn btn-primary" (click)="create_Invoice()" style="width: 100%;">save</button>
-        </div>
-        <div class="col-lg-3 "><a routerLink="/home"><button class="btn btn-primary" style="width: 100%;">cancel</button></a>
-        </div>
+            <div class="col-lg-2 col-lg-offset-2">
+                <button class="btn btn-primary" (click)="create_Invoice()" style="width: 100%;">save</button>
+            </div>
+            <div class="col-lg-3 ">
+                <a routerLink="/home">
+                    <button class="btn btn-primary" style="width: 100%;">cancel</button>
+                </a>
+            </div>
         </div>
 
     </div>
